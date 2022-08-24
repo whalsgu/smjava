@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+    
+    for (var i=1; i<=10; i++) {
+        for (var j=1; j<=i; j++) {
+            contents += "&nbsp;";   // &nbsp; 는 공백(" ")을 나타냄
+        } 
+        for (var j=1; j<=10-i; j++) {
+            contents += "*";    
+        } 
+        contents += "<br>";
+    }  
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

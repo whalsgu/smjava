@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var num = 1
+    var sum = 0
+
+    while (num <= 100) {
+        if (num%2 == 1) {
+            sum += num;
+        }            
+        num++; 
+    }
+    document.getElementById("result").innerHTML = "1~100의 홀수 합계 : " + sum;
+</script>
+</body>  
+</html>

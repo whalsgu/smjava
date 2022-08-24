@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+button {
+    background-color: yellow; 
+    padding: 10px; text-align: center;
+}
+</style>
+<script>
+    function changeTextColor(obj) {
+        obj.style.color = "red";
+    }
+
+    function changeBgColor(obj) {
+        obj.style.backgroundColor = "pink";
+    }
+</script>
+</head>
+<body>
+    <button onclick="changeTextColor(this)">글자 색상 변경하기</button>
+    <button onclick="changeBgColor(this)">배경 색상 변경하기</button>
+</body>  
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {    
+    $("div li:first").css("border", "solid 2px red");
+    $("div li:last").css("border", "solid 2px blue");
+});
+</script>
+</head>	
+<body>
+    <div>
+        <h2>:first/:last 필터</h2>
+        <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+            <li>항목 4</li>
+            <li>항목 5</li>
+        </ul>
+    </div>
+</body>  
+</html>

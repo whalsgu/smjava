@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+    function get_pay(price, discount, shipping) {  
+        var money;
+        money = price - (price * (discount/100)) + shipping;
+        return money;
+    }
+
+    var price = 25000;      // 책값
+    var discount = 10;      // 할인율(%)
+    var shipping = 5000;    // 배송료
+    var pay;                // 결제금액
+                 
+    pay = get_pay(price, discount, shipping);
+    document.write("책 값 : " + price + "원<br>");
+    document.write("할인율 : " + discount + "%<br>");
+    document.write("배송료 : " + shipping + "원<br><br>");
+    document.write("- 결제 금액 : " + pay + "원");
+</script>
+</head>	
+<body>
+</body>  
+</html>

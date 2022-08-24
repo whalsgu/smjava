@@ -1,0 +1,15 @@
+
+
+[자바 버전]
+jdk 1.8.0.202
+https://www.oracle.com/kr/java/technologies/javase/javase8-archive-downloads.html
+
+[사용자 환경변수]
+JAVA_HOME : D:\Tools\java\jdk1.8.0_202
+PATH : %JAVA_HOME%\bin;
+PATH : D:\Tools\java\jdk1.8.0_202\bin
+
+CLASSPATH : .;%JAVA_HOME%\lib\
+
+[시스템 변수]
+Path : C:\Windows\System32;C:\Windows;

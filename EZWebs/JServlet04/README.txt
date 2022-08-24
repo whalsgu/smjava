@@ -1,0 +1,72 @@
+[ Dynamic Web Project ]
+
+1. JDBC
+2. Tomcat
+3. Table member
+
+
+[JDBC Driver]
+https://www.oracle.com/kr/database/technologies/appdev/jdbc-downloads.html
+
+Oracle Database 12.2.0.1 JDBC Driver & UCP Downloads
+https://www.oracle.com/database/technologies/jdbc-ucp-122-downloads.html
+
+https://www.oracle.com/database/technologies/jdbc-drivers-12c-downloads.html
+
+Filename: ojdbc8.jar
+Install Path: Tomcat:/lib/ojdbc8.jar
+
+-----------------------------------------------------------------------
+
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+
+-- USER SQL
+CREATE USER "SOLUSER" IDENTIFIED BY "SOLUSER"  
+DEFAULT TABLESPACE "SOLDB"
+TEMPORARY TABLESPACE "TEMP";
+
+-- QUOTAS
+ALTER USER "SOLUSER" QUOTA UNLIMITED ON "SOLDB";
+
+-- ROLES
+GRANT "CONNECT" TO "SOLUSER" ;
+GRANT "RESOURCE" TO "SOLUSER" ;
+
+-- SYSTEM PRIVILEGES
+GRANT CREATE TRIGGER TO "SOLUSER" ;
+GRANT CREATE VIEW TO "SOLUSER" ;
+GRANT CREATE SESSION TO "SOLUSER" ;
+GRANT CREATE TABLE TO "SOLUSER" ;
+GRANT CREATE SYNONYM TO "SOLUSER" ;
+GRANT CREATE SEQUENCE TO "SOLUSER" ;
+
+-----------------------------------------------------------------------
+
+CREATE TABLE MEMBER
+(
+	MID   VARCHAR2(10) PRIMARY KEY,
+	MNAME VARCHAR2(30),
+	PWD   VARCHAR2(30),
+	EMAIL VARCHAR2(50),
+	REGDATE DATE DEFAULT SYSDATE
+);	
+
+
+-----------------------------------------------------------------------
+컨넥션 풀(Connection Pool)
+http://www.java2s.com/Code/Jar/t/Downloadtomcatdbcp7030jar.htm
+
+(Tomcat:conf/context.xml)
+<Context>
+ <Resource
+    	name="jdbc/oracle"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="oracle.jdbc.OracleDriver"
+    	url="jdbc:oracle:thin:@localhost:1521:orcl"
+    	username="SOLUSER"
+    	password="SOLUSER"
+    	maxActive="50"
+    	maxWait="-1" />
+</Context>    	
+    	

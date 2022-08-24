@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+    function is_besu5(n) {
+        var str;
+        if (n%5 == 0) {
+            str = n + "은(는) 5의 배수이다.";
+        }
+        else {
+            str = n + "은(는) 5의 배수가 아니다.";
+        }
+        return str;
+    }
+    
+    var num = 15;   
+    var message;
+    
+    message = is_besu5(num);
+    document.write(message);
+</script>
+</head>	
+<body>
+</body>  
+</html>

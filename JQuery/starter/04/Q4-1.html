@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+    var num = 1;
+    var file_name;
+
+    while (num<=5) {
+        file_name = "img/image" + num + ".png";
+        contents += "<img src='" + file_name + "'>";
+
+        num++;
+    }
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

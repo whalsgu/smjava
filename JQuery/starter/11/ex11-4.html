@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<style>
+body {
+    margin: 0;
+    padding: 110px 30px 30px;
+}
+p {
+    line-height: 180%;
+}
+section {
+    margin-bottom: 300px;
+}  
+nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #404c5f;
+    position: fixed;
+    padding: 30px;
+}
+nav a {
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover, nav a:focus {
+    color: white;
+}
+nav a.active {
+    color: orange;
+}
+</style>
+<script>
+$(document).ready(function () {
+    $(".nav a").click(function(){
+        $(".active").removeClass("active");     
+        $(this).addClass("active");
+          
+        $("html, body").stop().animate({
+            scrollTop: $($(this).attr("href")).offset().top - 120
+        }, 300);
+    });
+});
+</script>
+</head>	
+<body>
+    <nav class="nav">
+        <a id="menu1" href="#link1" class="active">웹이란?</a>
+        <a id="menu2" href="#link2">웹 브라우저</a>
+        <a id="menu3" href="#link3">웹 호스팅</a>
+        <a id="menu3" href="#link4">웹 프로그래밍</a>
+    </nav>
+    
+    <section id="link1">
+        <h1>웹이란?</h1>
+        <p>웹은 "World Wide Web"의 약어로서 간단하게 WWW로 
+            표현한다. 웹이란 인터넷에 연결된 컴퓨터를 통해 전 
+            세계 사람들이 정보를 제공하고 공유할 수 있는 사이버 
+            공간을 의미한다.</p>
+    </section>
+    
+    <section id="link2">
+        <h2>웹 브라우저</h2>
+        <p>웹 사이트에 구축된 웹 페이지, 즉 HTML 문서를 볼 
+            수 있는 응용 프로그램을 의미한다.인터넷 익스플로러, 
+            크롬, 사파리, 파이어폭스 등의 프로그램이 여기에 속한다.</p>
+    </section>
+    
+    <section id="link3">
+        <h2>웹 호스팅</h2>
+        <p>웹 사이트에 구축된 웹 페이지, 즉 HTML 문서를 볼 
+            수 있는 응용 프로그램을 의미한다.인터넷 익스플로러, 
+            크롬, 사파리, 파이어폭스 등의 프로그램이 여기에 속한다.</p>
+    </section>
+
+    <section id="link4">
+        <h2>웹 프로그래밍</h2>
+        <p>웹 사이트의 기능을 구현하기 위하여 HTML/CSS와 
+            웹 프로그래밍 언어(자바스크립트, PHP, JSP 등)를 이용하여 
+            프로그램을 작성하는 것을 의미한다.</p>
+    </section>
+</body>  
+</html>

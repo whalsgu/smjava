@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var sum = 0;
+    var contents = "";
+
+    for (var num=100; num<=120; num++) {
+        if (num%3 != 0) {
+            sum += num;
+            contents += num + "까지의 합 : " + sum + "<br>";
+        }            
+    }
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

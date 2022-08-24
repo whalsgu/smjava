@@ -1,0 +1,21 @@
+[Bookshelf]
+
+1. Generic
+2. ArrayList
+3. 책의 종류별 관리
+   - 소설
+   - 에세이
+   - 학습서
+   ...
+   
+
+public interface Iterator<T> {
+	public abstract boolean hasNext();
+	public abstract T next();
+}
+
+
+public interface Aggregate<T> {
+	public abstract Iterator<T> iterator();
+}
+   

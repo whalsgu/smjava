@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+table { border-collapse: collapse; }
+th, td { border: solid 1px gray; }
+th { padding: 5px; background-color: #eeeeee}
+td { padding:5px; text-align: center; }
+</style>
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents;
+    var kg, g, pound, ounce;
+
+    contents = "<h3>무게 단위 환산표</h3>"
+    contents += "<table>";
+    contents += "<tr><th>킬로그램</th><th>그램</th>";
+    contents += "<th>파운드</th><th>온스</th></tr>";
+    
+    for (kg=1; kg<=10; kg += 2) {
+        g = kg * 1000;
+        pound = kg * 2.204623;
+        ounce = kg * 35.273962;
+
+        pound = pound.toFixed(2);
+        ounce = ounce.toFixed(2);
+
+        contents += "<tr>";
+        contents += "<td>" + kg + "</td>";
+        contents += "<td>" + g + "</td>";
+        contents += "<td>" + pound + "</td>";
+        contents += "<td>" + ounce + "</td>";
+        contents += "</tr>";
+    } 
+    contents +="</table>";
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

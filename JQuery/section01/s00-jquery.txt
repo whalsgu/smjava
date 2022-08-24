@@ -1,0 +1,20 @@
+[제이쿼리]
+
+1. 제이쿼리는 문서 로딩이 완료되고 준비가 되어야 정상 작동한다.
+   그러므로 아래 2가지 방법 중 하나를 선택해서 사용할 수 있다.
+
+(방법1)   
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#title").css("color", "red");
+        });
+    </script>
+
+(방법2)
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#title").css("color", "blue");
+        });
+    </script>

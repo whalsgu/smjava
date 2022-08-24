@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+    function Employee(name, age, position, salary) {
+        this.name = name;
+        this.position = position;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    var person1 = new Employee("안진수", 52, "부장", 5000000);
+    var person2 = new Employee("홍지영", 28, "사원", 3000000);
+
+    var list = "";      
+    list += "1. " + person1.name + " : ";
+    list += person1.position + ", ";
+    list += person1.age + ", ";
+    list += person1.salary;
+    list += "<br>";
+
+    list += "2. " + person2.name + " : ";
+    list += person2.position + ", ";
+    list += person2.age + ", ";
+    list += person2.salary;
+
+    document.write(list);
+</script>
+</head>	
+<body>
+</body>  
+</html>

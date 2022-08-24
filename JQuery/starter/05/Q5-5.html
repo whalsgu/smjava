@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+    function cal_change() {
+        var price = 1500;   // price : 개당 가격
+        var num = 3;        // num : 구매 개수
+        var pay = 10000;    // pay : 지불 금액
+        var change;         // change : 거스름돈
+
+        change = pay - price * num;
+
+        document.getElementById("price").innerHTML = price;
+        document.getElementById("num").innerHTML = num;
+        document.getElementById("pay").innerHTML = pay;
+        document.getElementById("change").innerHTML = change;
+    }
+</script>
+</head>	
+<body>
+    <div style="border: solid 1px gray; padding: 10px; margin-bottom: 10px;">
+        - 개당가격 : <span id="price"></span>원<br>
+        - 구매개수 : <span id="num"></span>개<br>
+        - 지불금액 : <span id="pay"></span>원<br><br>
+        ■ 거스름돈 : <span id="change"></span>원
+    </div>
+    <button onclick="cal_change()">거스름돈 계산하기</button>
+</body>  
+</html>

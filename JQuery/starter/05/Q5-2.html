@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+    function sum_int(a, b) {
+        var sum = 0;
+        for(var i=a; i<=b; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    var start = 100;   // 시작 수
+    var end = 300;  // 끝 수
+    var value;
+    
+    value = sum_int(start, end);
+
+    document.write(start +"에서 " + end + "까지의 합계 : " + value);
+</script>
+</head>	
+<body>
+</body>  
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>My Album</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+          $(".images img").click(function(){
+              // let img = new Image();
+              var src = $(this).attr("src")
+              var alt = $(this).attr("alt")
+              $('.modalBox').html('<img src="' + src + '"><p>' + alt + '</p>');
+              console.log(src)
+              $(".modal").show();
+          });
+
+          $(".modal").click(function (e) {
+              $(".modal").toggle();
+          });
+        });
+
+
+    </script>
+</head>
+<body>
+  <header><h2><a href="main.html">First Gallery</a></h2></header>
+  <section id="container">
+    <div class="imglist">
+      <div class="images">
+        <img src="images/5.jpg" alt="설명을 위한 공간 입니다">
+        <img src="images/6.jpg" alt="설명을 위한 공간 입니다">
+        <img src="images/7.jpg" alt="설명을 위한 공간 입니다">
+        <img src="images/8.jpg" alt="설명을 위한 공간 입니다">
+      </div>
+    </div>
+    <div class="imglist">
+      <div class="images">
+        <img src="images/9.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/10.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/11.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/12.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+      </div>
+    </div>
+    <div class="imglist">
+      <div class="images">
+        <img src="images/13.jpg" alt="설명을 위한 공간입니다">
+        <img src="images/14.jpg" alt="설명을 위한 공간입니다">
+        <img src="images/15.jpg" alt="설명을 위한 공간입니다">
+        <img src="images/16.jpg" alt="설명을 위한 공간입니다">
+      </div>
+    </div>
+    <div class="imglist">
+      <div class="images">
+        <img src="images/17.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/18.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/19.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+        <img src="images/20.jpg" alt="사진에 대한 상세 설명을 입력하세요">
+      </div>
+    </div>
+  </section>
+  <div class="modal">
+    <div class="modalBox">
+    </div>
+</div>
+</body>
+</html>

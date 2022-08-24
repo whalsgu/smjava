@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    table { border-collapse: collapse; }
+    th, td { border: solid 1px gray; }
+    th { width: 120px; padding: 5px; background-color: #eeeeee}
+    td { padding:5px; text-align: center; }
+</style>
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var city =["서울", "부산",  "인천", "대전", "광주"];
+    var low_temp =[10, 11, 12, 10, 13];
+    var high_temp =[27, 26, 28, 28, 26];
+
+    var contents = "";
+    contents += "<h3>지역별 기온과 일교차</h3>"
+    contents +="<table>";
+    contents +="<tr><th>지역</th><th>최저기온</th><th>최고기온</th><th>일교차</th></tr>";
+
+    var i = 0;
+    while (i<=4) {
+        diff = high_temp[i] - low_temp[i];
+
+        contents +="<tr>";
+        contents += "<td>"+ city[i] + "</td>";
+        contents += "<td>"+ low_temp[i] + "</td>";
+        contents += "<td>"+ high_temp[i] + "</td>";
+        contents += "<td>"+ diff + "</td>";
+        contents +="</tr>";
+
+        i++;
+    }
+
+    contents +="</table>";
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

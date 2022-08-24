@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - rect</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            var draw_on = true;
+            draw();
+
+            $("#btn-clear").on({
+                "click" : function() {
+                    draw_on = !draw_on;
+                    if(draw_on) {
+                        draw();
+                    }
+                    else {
+                        clear();
+                    }
+                }
+            });
+        });
+
+        function draw() {
+            var canvas = $("#canvas");
+            var width = canvas.width();
+            var height = canvas.height();
+            var ctx = canvas.get(0).getContext('2d');
+            // ctx.fillStyle = "rgb(125,255,255)";
+            // ctx.fillRect(0,0,width,height);
+
+            var x = width / 2;
+            var y = height / 2;
+            var radius = (x > y) ? y - 10 : x - 10;
+            var degrees = 360;
+            var radians = degrees * (Math.PI / 180);
+
+            circle(ctx, x, y, radius / 2, radians);
+            ctx.clearRect(x,y,radius/2+5, radius/2+5);
+            fillText(ctx, 10, 30, "캔버스 텍스트");
+        }        
+
+        function fillText(ctx, x, y, text) {
+            ctx.font = "30px Comic Sans MS";
+            ctx.fillStyle = "red";
+            ctx.fillText(text, x, y);
+        }
+
+        function circle(ctx, x, y, radius, radians) {
+            ctx.arc(x, y, radius, 0, radians, false);
+            ctx.fillStyle = "#00f";
+            ctx.fill();
+            ctx.strokeStyle = "#f00";
+            ctx.lineWidth = 10;
+            ctx.stroke();
+        }        
+
+        function clear() {
+            var canvas = $("#canvas");
+            var width = canvas.width();
+            var height = canvas.height();
+
+            var ctx = canvas[0].getContext('2d');
+            ctx.clearRect(0, 0, width, height);
+        }        
+
+
+
+    </script>
+</head>
+<body>
+    <h2>Canvas - 캔버스 지우기</h2>
+    <button id="btn-clear">draw & clear</button>
+    <hr>
+    <canvas id="canvas" width="400" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+$(document).ready(function() { 
+    $("#title1").css("color", "red");    
+
+    $("#title2").css({"color": "blue", "font-weight": "bold"});   
+
+    $("#para").addClass("yellow");           
+});
+</script>
+<style>
+.yellow { background-color: yellow; }
+</style>
+</head>	
+<body>
+    <h2 id="title1">제목 1</h2>
+    <h2 id="title2">제목 2</h2>
+    <p id="para">단락이다.</p>
+</body>
+</html>

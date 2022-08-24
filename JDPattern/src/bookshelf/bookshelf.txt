@@ -1,0 +1,18 @@
+[문제] 서재관리
+참고 : createinstance, students
+
+(서재) Bookshelf
+- 다양한 장르의 책들
+- 장르별로 관리(Books) 배열
+
+(서책) Books
+- 책(Book)관리 배열
+- 소설
+- 기술
+- 학습
+
+(책) Book
+- 타이틀
+- 저자
+- 발행일자
+- 소개내용

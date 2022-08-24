@@ -1,0 +1,7 @@
+
+
+https://edelivery.oracle.com/osdc/faces/Home.jspx
+
+Oracle Database 12c
+
+DLP:Oracle Database 12c 12.1.0.1.0 ( Oracle Database Standard Edition, Oracle Database Standard Edition One, Oracle Database Vault )		

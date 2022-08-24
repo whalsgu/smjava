@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+$(document).ready(function() {    
+    $("#box").find("p").css("background-color", "yellow");
+    $("#box").find("h3").css("border", "solid 2px red");
+    $("#box").find("span").css("background-color", "skyblue");
+});
+</script>
+</head>	
+<body>
+    <div id="box"> 
+        <p>단락 입니다</p>
+        <div>
+            <ul>
+                <li>항목 1</li>
+                <li><span>항목 2</span></li>
+            </ul>
+        </div>
+        <h3>글 제목입니다.</h3>
+    </div>    
+</body>  
+</html>

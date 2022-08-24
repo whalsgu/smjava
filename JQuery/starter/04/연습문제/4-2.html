@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents;
+    var c, f;       // c: 섭씨, f: 화씨
+    
+    contents = "---------------------<br>"
+    contents += "섭씨 &nbsp; 화씨<br>"
+    contents += "---------------------<br>"
+
+    c = 0;
+    while (c <= 30) {
+        f = c * 9.0/5.0 + 32.0;
+        contents += c + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + f + "<br>";
+        c += 5;
+    }
+    contents += "---------------------<br>"
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

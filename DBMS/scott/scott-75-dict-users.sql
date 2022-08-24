@@ -1,0 +1,16 @@
+-- 데이터 사전(Data Dictionary)
+
+SELECT * FROM dict WHERE table_name LIKE 'USER_T%' ORDER BY 1;
+
+-- 접속한 사용자가 소유한 객체 정보
+DESC USER_TABLES;
+SELECT * FROM USER_TABLES;
+
+-- 사용자가 소유한 객체 정보
+DESC ALL_TABLES;
+SELECT * FROM ALL_TABLES;
+
+SELECT * FROM ALL_TABLES WHERE owner = 'SCOTT';
+SELECT * FROM ALL_TABLES WHERE owner = 'SOLUSER';
+
+SELECT * FROM ALL_TABLES WHERE owner IN('SCOTT', 'SOLUSER');

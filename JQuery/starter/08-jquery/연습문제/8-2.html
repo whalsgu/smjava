@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+$(document).ready(function() { 
+    $("#list").append("<li style='background-color:yellow'>안녕하세요.</li>");     
+
+    $("#list").prepend("<li style='background-color:skyblue'>안녕하세요.</li>");  
+
+    $("#item2").before("<li style='background-color:pink'>안녕하세요.</li>");  
+
+    $("#item2").after("<li style='background-color:green'>안녕하세요.</li>");  
+});
+</script>
+</head>	
+<body>
+    <ul id="list">
+        <li id="item1">항목 1</li>
+        <li id="item2">항목 2</li>
+        <li id="item3">항목 3</li>
+    </ul>
+</body>  
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    table { border-collapse: collapse; }
+    th, td { border: solid 1px gray; }
+    th { padding: 5px; background-color: #eeeeee}
+    td { padding:5px; text-align: center; }
+</style>
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+    contents += "<h3>구구단표</h3>"
+    contents +="<table>";
+    contents +="<tr><th>2단</th><th>3단</th><th>4단</th><th>5단</th>";
+    contents +="<th>6단</th><th>7단</th><th>8단</th><th>9단</th></tr>";
+
+    for (var j=1; j<=9; j++) {
+        contents +="<tr>";
+        for (var i=2; i<=9; i++) {
+            contents += "<td>"+ i + "x" + j + "=" + (i*j) + "</td>";
+        }  
+        contents +="</tr>";    
+    } 
+    contents +="</table>";
+
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

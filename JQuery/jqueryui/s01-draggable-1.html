@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Plugin </title>
+<script src="js/jquery.js"></script>
+<script src="jquery-ui-1.13.0/jquery-ui.js"></script>
+<style>
+	.imagebox {
+		position: absolute; 
+		left: 50px; 
+		top: 50px;
+		cursor:move;
+	}
+</style>
+<script>
+$(function() {
+	$(".imagebox").draggable();
+});
+</script>
+</head>
+<body>
+<div class="imagebox">
+	<img src="../images/sample-1.jpg" alt="">
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+
+
+cmd
+setup.exe -ignorePrereq -J"-Doracle.install.db.validate.supportedOSCheck=false"
+setup.exe -ignorePrereg -J"-Doracle.install.db.validate.supportedOSCheck=false"
+setup.exe -ignorePrereq -J"-Doracle.install.client.validate.clientSupportedOSCheck=false"
+
+(SQL Developer)
+SQL Developer 21.2.1 Downloads
+https://www.oracle.com/tools/downloads/sqldev-downloads.html
+
+
+
+(Oracle Problem)
+> 한글계정에서 오라클 설치 문제
+https://blog.naver.com/ndb796/221297160013
+
+> 방화벽 해제
+> failed to set acl's for specified user
+https://community.oracle.com/tech/developers/discussion/4481420/error-failed-to-add-acls-for-specified-user-oracle-database-19c-installation
+
+Turn OFF your Firewall on your Windows 10 Pro machine for the duration of the install. You will likely need to run deintall.bat first, to deinstall the failed attempt. Then re-run the Oracle installer after you've disabled your Firewall. You can re-enable the firewall AFTER you've successfully installed Oracle.
+
+
+https://karismamun.tistory.com/74
+https://hwan1001.tistory.com/31

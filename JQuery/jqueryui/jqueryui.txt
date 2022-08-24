@@ -1,0 +1,4 @@
+
+(bxSlider)
+https://bxslider.com/
+https://github.com/stevenwanderski/bxslider-4

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {    
+    $("li:first-child").css("background-color", "yellow");
+    $("li:last-child").css("background-color", "pink");
+
+    $("li:first").css("border", "solid 2px red");
+    $("li:last").css("border", "solid 2px black");
+});
+</script>
+<style>
+ul { border: solid 1px blue; }
+</style>
+</head>	
+<body>
+    <h2>:first-child/:last-child 필터</h2>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>    
+</body>  
+</html>

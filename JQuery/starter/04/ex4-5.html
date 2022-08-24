@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+    var n = 1;
+    while (n<=6) {
+        if (n%2 == 1) {
+            contents += "<img src='img/image1.png'>";
+        } 
+        else {
+            contents += "<img src='img/image2.png'>";
+        }
+        n++;
+    }
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>

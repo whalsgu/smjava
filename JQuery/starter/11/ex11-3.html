@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+.navigation {
+  height: 60px;
+  background: #333333;
+}
+.logo {
+  float: left;
+  margin-top: 20px;
+}
+.logo a, .logo a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav_container {
+  width: 900px;
+  margin: 0 auto;
+}
+nav {
+  float: right;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a, nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 60px;
+  background: #333333;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover, nav ul li a:visited:hover {
+  background:#27cbef;
+  color: #ffffff;
+}
+nav ul li ul li {
+  width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.nav_dropdown {
+  position: absolute;
+  display: none;
+}
+</style>
+<script>
+$(document).ready(function () {
+      // 드롭다운 메뉴를 클릭하면, 서브 메뉴를 토글시킨다.
+      $("nav ul li a:not(:only-child)").click(function(e) {
+        $(this).siblings(".nav_dropdown").toggle();
+        // 드롭다운 메뉴 선택 시 다른 드롭다운 메뉴는 숨기기
+        $(".nav_dropdown").not($(this).siblings()).hide();
+          e.stopPropagation();
+      });
+      // 드롭 다운 메뉴 외 다른 곳 클릭 시 .nav_dropdown 클래스 숨기기      
+      $("html").click(function() {
+        $(".nav_dropdown").hide();
+      });      
+});
+</script>
+</head>	
+<body>
+    <section class="navigation">
+        <div class="nav_container">
+          <div class="logo">
+            <a href="#">로고</a>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">웹 강좌 ▼</a>
+                <ul class="nav_dropdown">
+                  <li>
+                    <a href="#">HTML/CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">자바스크립트</a>
+                  </li>
+                  <li>
+                    <a href="#">제이쿼리</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">커뮤티티 ▼</a>
+                <ul class="nav_dropdown">
+                  <li>
+                    <a href="#">공지 게시판</a>
+                  </li>
+                  <li>
+                    <a href="#">자유 게시판</a>
+                  </li>
+                  <li>
+                    <a href="#">QNA 게시판</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">이용 안내</a>
+              </li>
+            </ul>
+          </nav>
+      </div>
+    </section>
+</body>  
+</html>

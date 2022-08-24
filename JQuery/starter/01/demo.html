@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function light_on() {
+		document.getElementById('image').src = "light_on.png";
+	}
+
+	function light_off() {
+		document.getElementById('image').src = "light_off.png";
+	}
+</script>
+</head>
+<body>
+	<button onclick="light_on()">켜기</button>
+	<button onclick="light_off()">끄기</button>
+
+	<img id="image" src="light_off.png">
+</body>
+</html>
